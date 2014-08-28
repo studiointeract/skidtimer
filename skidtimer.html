@@ -1,0 +1,30 @@
+<head>
+  <title>Skidtimern</title>
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+  {{> people}}
+</body>
+
+<template name="people">
+  <ul>
+    {{#each people}}
+    <li>
+      {{#if end}}
+      <span class="timer">{{total}}</span>
+      {{name}}
+      {{else}}
+      <span class="timer">{{timer}}</span>
+      {{name}}
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+
+  <form>
+    <input type="text" placeholder="Namn">
+    <button>Lägg till</button>
+  </form>
+
+</template>
